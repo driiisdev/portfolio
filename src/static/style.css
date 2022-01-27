@@ -1,0 +1,315 @@
+/* tailwindcss directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body */
+*{
+    @apply scroll-smooth;
+}
+body{
+    @apply bg-white dark:bg-black mx-auto;
+}
+/* nav */
+.nav{
+    @apply bg-white dark:bg-neutral-900 shadow-md fixed top-0 right-0 left-0;
+}
+.nav-container{
+    @apply mx-auto py-5;
+}
+.nav-direction{
+    @apply flex justify-between mx-28 md:mx-12 sm:mx-4;
+}
+.toggle-display{
+    @apply hidden;
+}
+.nav-logo{
+    @apply flex;
+}
+.nav-logo a{
+    @apply text-3xl sm:text-2xl text-blue-600;
+}
+.nav-right{
+    @apply flex justify-items-center place-items-center space-x-5;
+}
+.primary-nav{
+    @apply md:hidden flex space-x-5 text-lg items-center;
+}
+.primary-nav a{
+    @apply text-blue-400 hover:text-blue-600 hover:underline;
+}
+.day-mode{
+    @apply font-semibold text-3xl sm:font-medium text-blue-600;
+}
+.toggle-icon{
+    @apply hidden md:block sm:font-medium text-blue-700 text-2xl cursor-pointer select-none;
+}
+.primary-nav-expand{
+    @apply mx-auto hidden;
+}
+.primary-nav-expand.show{
+    @apply flex flex-col;
+}
+.primary-nav-expand a{
+    @apply text-center text-blue-400 hover:text-blue-600 hover:underline;
+}
+/* profile */
+.profile{
+    @apply bg-blue-200 dark:bg-neutral-800 dark:text-white mt-16 scroll-mt-16;
+}
+.profile-container{
+    @apply mx-auto;
+}
+.profile-direction{
+    @apply flex md:flex-wrap place-items-center;
+}
+.profile-left{
+    @apply w-1/2 md:min-w-full flex flex-col;
+}
+.profile-details{
+    @apply sm:mx-4 md:mx-12 ml-28 my-6;
+}
+.profile-details .title{
+    @apply text-xl font-bold;
+}
+.profile-details span{
+    @apply text-4xl font-medium;
+}
+.profile-details h1{
+    @apply text-5xl font-semibold;
+}
+.profile-details p{
+    @apply my-6 leading-loose;
+}
+.profile-links{
+    @apply flex flex-wrap space-x-4 gap-y-1;
+}
+.profile-links .btn{
+    @apply py-2 px-5 rounded-lg text-yellow-300 bg-gray-700 hover:bg-gray-900;
+}
+.profile-right{
+    @apply w-1/2 md:min-w-full flex place-items-center;
+}
+.profile-photo{
+    @apply mx-auto;
+}
+.profile-photo img{
+    @apply w-144 h-144 sm:h-auto;
+}
+/* service */
+.service{
+    @apply bg-gray-100 dark:bg-neutral-900 scroll-mt-16;
+}
+.service-container{
+    @apply mx-auto py-4;
+}
+.service-header .title{
+    @apply text-center text-3xl text-blue-700 font-medium underline underline-offset-4;
+}
+.service-direction{
+    @apply flex md:flex-wrap justify-between mx-24 md:mx-10 sm:mx-auto my-8;
+}
+.service-direction .card{
+    @apply w-1/3 md:w-full px-8 sm:px-3 py-8 mx-4 md:my-4 border-solid rounded-lg bg-white dark:bg-neutral-800 shadow-md;
+}
+.service-direction .card .icon{
+    @apply text-2xl font-semibold text-blue-700;
+}
+.service-direction .card h1{
+    @apply text-2xl dark:text-gray-200 font-semibold my-3;
+}
+.service-direction .card p{
+    @apply my-3 dark:text-gray-200;
+}
+/* skill */
+.skill{
+    @apply bg-blue-400 dark:bg-neutral-800 scroll-mt-16;
+}
+.skill-container{
+    @apply py-4 mx-auto;
+}
+.skill-direction{
+    @apply flex flex-wrap justify-evenly mx-20 md:mx-10 sm:mx-4;
+}
+.skill-item{
+    @apply p-5;
+}
+.skill-item h1{
+    @apply font-normal text-lg dark:text-gray-200;
+}
+.skill-item span i{
+    @apply text-2xl dark:text-blue-700;
+}
+/* portfolio */
+.portfolio{
+    @apply bg-white dark:bg-neutral-900 scroll-mt-16;
+}
+.portfolio-container{
+    @apply py-4 mx-auto;
+}
+.portfolio-header{
+    @apply text-center text-3xl text-blue-700 font-medium underline underline-offset-4;
+}
+.portfolio-nav{
+    @apply flex justify-around;
+}
+.portfolio-ul{
+    @apply flex flex-shrink my-6 sm:mx-1.5 bg-white dark:bg-neutral-800 border-2 border-blue-100;
+}
+.portfolio-ul li{
+    @apply dark:text-gray-200 px-3 md:px-1 md:text-sm sm:text-xs font-light select-none cursor-pointer border-2 border-solid;
+}
+.portfolio-li-active{
+    @apply bg-blue-500 text-white dark:text-gray-200;
+}
+.portfolio-direction{
+    @apply flex flex-wrap max-w-4xl mx-auto sm:mx-1.5 justify-center gap-x-10 gap-y-10;
+}
+.portfolio-photo{
+    @apply p-3 border-2 border-solid rounded w-64 h-auto;
+}
+.portfolio-photo img{
+    @apply h-56 w-60;
+}
+.portfolio-overlay{
+    @apply block;
+}
+.portfolio-content{
+    @apply text-center divide-y-2;
+}
+.portfolio-content h1{
+    @apply my-2 text-base font-semibold text-blue-700;
+}
+.portfolio-content h2{
+    @apply text-gray-800 dark:text-gray-50;
+}
+.portfolio-content h3{
+    @apply text-blue-400 text-xl;
+}
+.portfolio-content h3 a{
+    @apply hover:text-blue-800;
+}
+/* resume */
+.resume{
+    @apply bg-gray-200 dark:bg-neutral-800 scroll-mt-16;
+}
+.resume-container{
+    @apply mx-auto py-4;
+}
+.resume-direction{
+    @apply flex md:flex-wrap mx-20 md:mx-10 sm:mx-1;
+}
+.resume-direction .column-one{
+    @apply w-1/2 md:w-full
+}
+.resume-direction .column-two{
+    @apply w-1/2 md:w-full
+}
+.resume-direction .column{
+    @apply mx-8 my-10;
+}
+.resume-direction .column .resume-header{
+    @apply text-3xl text-blue-700 font-medium underline underline-offset-4;
+}
+.resume-direction .column .resume-section{
+    @apply divide-y-2 divide-blue-400;
+}
+.resume-direction .resume-detail{
+    @apply py-8;
+}
+.resume-direction .resume-detail h2{
+    @apply dark:text-gray-200 text-lg font-semibold border-2 border-blue-700 max-w-max px-1 my-4;
+}
+.resume-direction .resume-detail h3{
+    @apply dark:text-gray-200 text-2xl font-medium my-4;
+}
+.resume-direction .resume-detail p{
+    @apply dark:text-gray-200;
+}
+/* contact */
+.contact{
+    @apply bg-blue-400 dark:bg-neutral-900 scroll-mt-16;
+}
+.contact-container{
+    @apply mx-auto py-4;
+}
+.contact-header{
+    @apply text-center text-3xl text-blue-700 font-medium underline underline-offset-4;
+}
+.contact-direction{
+    @apply flex md:flex-wrap-reverse mx-28 md:mx-16 sm:mx-10;
+}
+.contact-section{
+    @apply w-1/2 md:w-full mx-auto my-8;
+}
+.contact-detail{
+    @apply my-3.5;
+}
+.contact-detail h6{
+    @apply font-medium text-xl dark:text-gray-200;
+}
+.contact-detail p{
+    @apply font-light text-xl dark:text-gray-200;
+}
+.contact-detail p a{
+    @apply text-blue-700 break-words hover:text-blue-900 hover:underline;
+}
+input, textarea{
+    @apply dark:bg-neutral-700;
+}
+.namemail{
+    @apply flex flex-initial space-x-0.5;
+}
+.namemail input{
+    @apply my-2 px-3 w-1/2 h-10 border-solid border-0 rounded-lg;
+}
+.subject input{
+    @apply my-2 px-3 w-full h-10 border-solid border-0 rounded-lg;
+}
+.message textarea{
+    @apply my-2 px-3 w-full h-24 border-solid border-0 rounded-lg;
+}
+form .btn{
+    @apply text-right rounded-lg py-3 px-6 sm:py-2 sm:px-2 text-yellow-300 bg-gray-700 hover:bg-gray-900;
+}
+/* footer */
+.footer{
+    @apply bg-white dark:bg-neutral-800 bottom-0 right-0 left-0;
+}
+.footer-container{
+    @apply mx-auto py-5;
+}
+.footer-direction{
+    @apply flex justify-between flex-wrap mx-24 md:mx-10 sm:mx-4 place-items-center md:space-y-3;
+}
+.footer-copy{
+    @apply md:w-full md:text-center;
+} 
+.footer-copy p{
+    @apply dark:text-gray-200;
+}
+.footer-copy a{
+    @apply font-medium text-blue-700 hover:underline hover:underline-offset-4;
+}
+.footer-socials{
+    @apply md:w-full md:text-center space-x-5;
+}
+.footer-socials a{
+    @apply text-xl text-gray-600;
+}
+.footer-socials .fa-github{
+    @apply hover:text-black;
+}
+.footer-socials .fa-behance-square{
+    @apply hover:text-blue-700;
+}
+.footer-socials .fa-linkedin{
+    @apply hover:text-blue-600;
+}
+.footer-socials .fa-twitter{
+    @apply hover:text-blue-500;
+}
+/* toTop */
+.moveTop{
+    @apply fixed z-99 right-5 bottom-5 sm:right-3 sm:bottom-3 rounded-lg h-8 w-8 text-xl text-yellow-400 bg-gray-900;
+}
