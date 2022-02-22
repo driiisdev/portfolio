@@ -18,7 +18,7 @@ body{
     @apply mx-auto py-5;
 }
 .nav-direction{
-    @apply flex justify-between mx-28 md:mx-12 sm:mx-4;
+    @apply flex justify-between place-items-center mx-28 md:mx-12 sm:mx-4;
 }
 .toggle-display{
     @apply hidden;
@@ -38,8 +38,20 @@ body{
 .primary-nav a{
     @apply text-blue-400 hover:text-blue-600 hover:underline;
 }
-.day-mode{
-    @apply font-semibold text-3xl sm:font-medium text-blue-600;
+.mode{
+    @apply flex;
+}
+.mode-ul{
+    @apply flex flex-shrink-0 space-x-2 bg-gray-200 border-4 border-solid border-gray-200 dark:border-neutral-900 dark:bg-black rounded-full;
+}
+.mode-ul li{
+    @apply py-1.5 px-2 select-none cursor-pointer rounded-full text-2xl dark:text-white;
+}
+svg{
+    @apply text-neutral-700 dark:text-neutral-300;
+}
+.mode-li-active{
+    @apply bg-slate-50 dark:bg-neutral-700;
 }
 .toggle-icon{
     @apply hidden md:block sm:font-medium text-blue-700 text-2xl cursor-pointer select-none;
