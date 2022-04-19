@@ -24,10 +24,10 @@ body{
     @apply hidden;
 }
 .nav-logo{
-    @apply flex;
+    @apply box-border;
 }
-.nav-logo a{
-    @apply text-3xl sm:text-2xl text-blue-600;
+.nav-logo a {
+    @apply inline-flex space-x-2 place-items-center text-3xl sm:text-2xl text-blue-600;
 }
 .nav-right{
     @apply flex justify-items-center place-items-center space-x-5;
@@ -36,7 +36,7 @@ body{
     @apply md:hidden flex space-x-5 text-lg items-center;
 }
 .primary-nav a{
-    @apply text-blue-400 hover:text-blue-600 hover:underline;
+    @apply text-blue-400 hover:text-blue-600 hover:underline hover:underline-offset-2;
 }
 .mode{
     @apply flex;
@@ -45,16 +45,19 @@ body{
     @apply flex flex-shrink-0 space-x-2 bg-gray-200 border-4 border-solid border-gray-200 dark:border-neutral-900 dark:bg-black rounded-full;
 }
 .mode-ul li{
-    @apply py-1.5 px-2 select-none cursor-pointer rounded-full text-2xl dark:text-white;
+    @apply py-1.5 px-2 sm:py-1 sm:px-1 select-none cursor-pointer rounded-full text-2xl dark:text-white;
 }
-svg{
-    @apply text-neutral-700 dark:text-neutral-300;
+.mode li svg{
+    @apply fill-transparent stroke-neutral-700 dark:stroke-neutral-300 h-6 w-6;
 }
 .mode-li-active{
     @apply bg-slate-50 dark:bg-neutral-700;
 }
 .toggle-icon{
-    @apply hidden md:block sm:font-medium text-blue-700 text-2xl cursor-pointer select-none;
+    @apply hidden md:block cursor-pointer select-none;
+}
+.toggle-icon svg{
+    @apply text-blue-700 text-2xl;
 }
 .primary-nav-expand{
     @apply mx-auto hidden;
@@ -67,10 +70,10 @@ svg{
 }
 /* profile */
 .profile{
-    @apply bg-blue-200 dark:bg-neutral-800 dark:text-white mt-16 scroll-mt-16;
+    @apply bg-blue-200 dark:bg-neutral-800 dark:text-white scroll-mt-16;
 }
 .profile-container{
-    @apply mx-auto;
+    @apply mx-auto py-12;
 }
 .profile-direction{
     @apply flex md:flex-wrap place-items-center;
@@ -79,7 +82,7 @@ svg{
     @apply w-1/2 md:min-w-full flex flex-col;
 }
 .profile-details{
-    @apply sm:mx-4 md:mx-12 ml-28 my-6;
+    @apply sm:mx-4 md:mx-12 ml-28 my-16;
 }
 .profile-details .title{
     @apply text-xl font-bold;
@@ -99,6 +102,12 @@ svg{
 .profile-links .btn{
     @apply py-2 px-5 rounded-lg text-yellow-300 bg-gray-700 hover:bg-gray-900;
 }
+.profile-links .cv-btn{
+    @apply inline-flex place-items-center gap-2 py-2 px-5 rounded-lg text-yellow-300 bg-gray-700 hover:bg-gray-900;
+}
+.profile-links .cv-btn svg{
+    @apply h-4 w-4 fill-yellow-300;
+}
 .profile-right{
     @apply w-1/2 md:min-w-full flex place-items-center;
 }
@@ -108,59 +117,43 @@ svg{
 .profile-photo img{
     @apply w-144 h-144 sm:h-auto;
 }
-/* service */
-.service{
-    @apply bg-gray-100 dark:bg-neutral-900 scroll-mt-16;
-}
-.service-container{
-    @apply mx-auto py-4;
-}
-.service-header .title{
-    @apply text-center text-3xl text-blue-700 font-medium underline underline-offset-4;
-}
-.service-direction{
-    @apply flex md:flex-wrap justify-between mx-24 md:mx-10 sm:mx-auto my-8;
-}
-.service-direction .card{
-    @apply w-1/3 md:w-full px-8 sm:px-3 py-8 mx-4 md:my-4 border-solid rounded-lg bg-white dark:bg-neutral-800 shadow-md;
-}
-.service-direction .card .icon{
-    @apply text-2xl font-semibold text-blue-700;
-}
-.service-direction .card h1{
-    @apply text-2xl dark:text-gray-200 font-semibold my-3;
-}
-.service-direction .card p{
-    @apply my-3 dark:text-gray-200;
-}
 /* skill */
 .skill{
-    @apply bg-blue-400 dark:bg-neutral-800 scroll-mt-16;
+    @apply bg-blue-400 dark:bg-neutral-900 scroll-mt-16;
 }
 .skill-container{
     @apply py-4 mx-auto;
 }
 .skill-direction{
-    @apply flex flex-wrap justify-evenly mx-20 md:mx-10 sm:mx-4;
+    @apply flex flex-wrap justify-evenly mx-16 md:mx-10 sm:mx-4;
 }
 .skill-item{
-    @apply p-5;
+    @apply py-5 px-3;
 }
 .skill-item h1{
-    @apply font-normal text-lg dark:text-gray-200;
+    @apply inline-flex font-normal text-lg gap-3 dark:text-gray-200;
 }
-.skill-item span i{
-    @apply text-2xl dark:text-blue-700;
+.skill-item h1 svg{
+    @apply place-items-center text-2xl text-black dark:text-blue-700;
 }
 /* portfolio */
 .portfolio{
-    @apply bg-white dark:bg-neutral-900 scroll-mt-16;
+    @apply bg-white dark:bg-neutral-800 scroll-mt-20;
 }
 .portfolio-container{
     @apply py-4 mx-auto;
 }
 .portfolio-header{
-    @apply text-center text-3xl text-blue-700 font-medium underline underline-offset-4;
+    @apply flex justify-center;
+}
+.portfolio-header .title{
+    @apply inline-flex;
+}
+.portfolio-header .title svg{
+    @apply self-end text-xl text-blue-700;
+}
+.portfolio-header .title p{
+    @apply text-3xl text-blue-700 font-medium;
 }
 .portfolio-nav{
     @apply flex justify-around;
@@ -187,23 +180,34 @@ svg{
     @apply block;
 }
 .portfolio-content{
-    @apply text-center divide-y-2;
+    @apply flex flex-col text-center divide-y-2;
 }
 .portfolio-content h1{
     @apply my-2 text-base font-semibold text-blue-700;
 }
-.portfolio-content h2{
-    @apply text-gray-800 dark:text-gray-50;
+
+.portfolio-content h2 ul{
+    @apply inline-flex justify-center;
 }
-.portfolio-content h3{
-    @apply text-blue-400 text-xl;
+.portfolio-content h2 ul li{
+    @apply m-1.5;
 }
-.portfolio-content h3 a{
-    @apply hover:text-blue-800;
+.portfolio-content h2 svg{
+    @apply text-xl text-gray-800 dark:text-gray-50;
+}
+
+.portfolio-content h3 ul{
+    @apply inline-flex justify-center;
+}
+.portfolio-content h3 ul li{
+    @apply m-1.5;
+}
+.portfolio-content h3 a svg{
+    @apply text-xl text-blue-400 hover:text-blue-800 ;
 }
 /* resume */
 .resume{
-    @apply bg-gray-200 dark:bg-neutral-800 scroll-mt-16;
+    @apply bg-gray-200 dark:bg-neutral-900 scroll-mt-16;
 }
 .resume-container{
     @apply mx-auto py-4;
@@ -212,10 +216,10 @@ svg{
     @apply flex md:flex-wrap mx-20 md:mx-10 sm:mx-1;
 }
 .resume-direction .column-one{
-    @apply w-1/2 md:w-full
+    @apply w-1/2 md:w-full;
 }
 .resume-direction .column-two{
-    @apply w-1/2 md:w-full
+    @apply w-1/2 md:w-full;
 }
 .resume-direction .column{
     @apply mx-8 my-10;
@@ -240,13 +244,22 @@ svg{
 }
 /* contact */
 .contact{
-    @apply bg-blue-400 dark:bg-neutral-900 scroll-mt-16;
+    @apply bg-blue-400 dark:bg-neutral-800 scroll-mt-16;
 }
 .contact-container{
     @apply mx-auto py-4;
 }
 .contact-header{
-    @apply text-center text-3xl text-blue-700 font-medium underline underline-offset-4;
+    @apply flex justify-center;
+}
+.contact-header .title{
+    @apply inline-flex justify-between;
+}
+.contact-header .title svg{
+    @apply self-end text-xl text-blue-800;
+}
+.contact-header .title p{
+    @apply text-3xl text-blue-800 font-medium;
 }
 .contact-direction{
     @apply flex md:flex-wrap-reverse mx-28 md:mx-16 sm:mx-10;
@@ -258,10 +271,13 @@ svg{
     @apply my-3.5;
 }
 .contact-detail h6{
-    @apply font-medium text-xl dark:text-gray-200;
+    @apply flex flex-row gap-3 place-items-center font-medium text-xl dark:text-gray-200;
+}
+.contact-detail h6 svg{
+    @apply text-2xl dark:text-gray-200;
 }
 .contact-detail p{
-    @apply font-light text-xl dark:text-gray-200;
+    @apply ml-9 font-light text-xl dark:text-gray-200;
 }
 .contact-detail p a{
     @apply text-blue-700 break-words hover:text-blue-900 hover:underline;
@@ -286,16 +302,16 @@ form .btn{
 }
 /* footer */
 .footer{
-    @apply bg-white dark:bg-neutral-800 bottom-0 right-0 left-0;
+    @apply bg-white dark:bg-neutral-900 bottom-0 right-0 left-0;
 }
 .footer-container{
     @apply mx-auto py-5;
 }
 .footer-direction{
-    @apply flex justify-between flex-wrap mx-24 md:mx-10 sm:mx-4 place-items-center md:space-y-3;
+    @apply flex place-items-center md:flex-wrap mx-28 md:mx-10 sm:mx-1 gap-3;
 }
 .footer-copy{
-    @apply md:w-full md:text-center;
+    @apply w-1/2 md:w-full md:text-center;
 } 
 .footer-copy p{
     @apply dark:text-gray-200;
@@ -304,24 +320,33 @@ form .btn{
     @apply font-medium text-blue-700 hover:underline hover:underline-offset-4;
 }
 .footer-socials{
-    @apply md:w-full md:text-center space-x-5;
+    @apply flex justify-end w-1/2 md:w-full md:justify-center;
 }
-.footer-socials a{
-    @apply text-xl text-gray-600;
+.footer-socials ul{
+    @apply inline-flex space-x-5;
 }
-.footer-socials .fa-github{
+.footer-socials ul li{
+    @apply text-xl;
+}
+.footer-socials ul li a{
+    @apply text-gray-700;
+}
+.footer-socials ul .github svg{
     @apply hover:text-black;
 }
-.footer-socials .fa-behance-square{
-    @apply hover:text-blue-700;
+.footer-socials ul .behance svg{
+    @apply hover:text-purple-700;
 }
-.footer-socials .fa-linkedin{
+.footer-socials ul .linkedin svg{
     @apply hover:text-blue-600;
 }
-.footer-socials .fa-twitter{
+.footer-socials ul .twitter svg{
     @apply hover:text-blue-500;
 }
 /* toTop */
 .moveTop{
-    @apply fixed z-99 right-5 bottom-5 sm:right-3 sm:bottom-3 rounded-lg h-8 w-8 text-xl text-yellow-400 bg-gray-900;
+    @apply fixed z-99 right-5 bottom-5 sm:right-3 sm:bottom-3 rounded-lg bg-gray-900;
+}
+.moveTop svg{
+    @apply px-1.5 py-0.5 text-2xl text-yellow-400;
 }

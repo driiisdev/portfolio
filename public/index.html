@@ -26,7 +26,8 @@
     
     <!-- scripts -->    
     <script src="./static/jquery.js"></script>
-    <script src="https://kit.fontawesome.com/dce08e2a11.js" crossorigin="anonymous"></script>
+    <!-- iconify fonts -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
 </head>
 <body>
@@ -36,7 +37,7 @@
             <div class="nav-direction">
                 <div class="nav-logo">
                     <a href="#">
-                        <span class="fas fa-laptop-code"></span>
+                        <span class="iconify" data-icon="fa-solid:laptop-code"></span>
                         <span class="name">Idris</span>
                     </a>
                 </div>
@@ -50,17 +51,13 @@
                     </div>
                     <div class="mode" id="mode">
                         <ul class="mode-ul">
-                            <li class="day mode-li-active" data-filter="light"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                              </svg></li>
+                            <li class="day mode-li-active" data-filter="light"><span class="iconify" data-icon="tabler:sun"></span></li>
 
-                            <li class="day" data-filter="dark"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                              </svg></li>
+                            <li class="day" data-filter="dark"><span class="iconify" data-icon="heroicons-outline:moon"></span></li>
                         </ul>
                     </div>
                     <div class="toggle-icon" id="toggle-icon">
-                        <i class="fas fa-align-right"></i>
+                        <span class="iconify" data-icon="fa6-solid:align-right"></span>
                     </div>
                 </div>
             </div>
@@ -82,9 +79,9 @@
                         <span class="title">Hello</span>
                         <h1> <span>I'm</span> Idris </h1>
                         <h1> a <span class="typed-text"></span><span class="cursor">|</span></h1>
-                        <p>In my 4 years journey as an Aspiring Software Engineer. I possess skills such as designing better user interface, programming logic & technique, web designing and development. I currently plan on creating valuable content via instagram and youtube.</p>
+                        <p>In my 5+ years journey as an Software Developer enthusiast. I possess skills</br>such as designing better user interface, programming logic & technique,</br> web designing and development. MERN stack, is the path I choose in ideating,</br> designing, building and providing solutions to users.</p>
                         <div class=" profile-links">
-                            <a class="btn" href="./img/idris-cv.pdf" target="_self"><i class="fas fa-download"></i> Download CV</a>
+                            <a class="cv-btn" href="./doc/Idris_Yakub_Resume.pdf" target="_self"><span class="iconify" data-icon="fa6-solid:download"></span> Download CV</a>
                             <a class="btn" href="#portfolio"> Portfolio </a>
                         </div>
                     </div>
@@ -98,83 +95,54 @@
         </div>
     </div>
     <!-- //profile -->
-    <!-- service -->
-    <div class="service">
-        <div class="service-container">
-            <div class="service-header">
-                <h2 class="title">Skills</h2>
-            </div>
-                
-            <div class="service-direction">
-                <div class="card">
-                    <div class="icon">
-                    <span class="fa fa-laptop"></span>
-                    </div>
-                    <h1><a href="#url">Web Development</a></h1>
-                    <p>With a well structured & planned project brief, I design rapid, attractive & responsive websites and of course not limiting its primary functions.</p>
-                </div>
-
-                <div class="card">
-                    <div class="icon">
-                    <span class="fas fa-pen-nib"></span>
-                    </div>
-                    <h1><a href="#url">UI/UX Design</a></h1>
-                    <p>Users often find it challenging navigating through some sites. I design simple, real and attractive interface for better user experience.</p>
-                </div>
-
-                <div class="card">
-                    <div class="icon">
-                    <span class="fas fa-edit"></span>
-                    </div>
-                    <h1><a href="#url">Content Creation</a></h1>
-                    <p>I'm currently putting together resources to create better content for tech newbies. Open and practical guide via youtube and instagram</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //service -->
     <!-- skill -->
     <div class="skill">
         <div class="skill-container">
             <div class="skill-direction">
                 <div class="skill-item">
-                    <h1><span><i class="fas fa-bacon"></i></span>
+                    <h1><span class="iconify" data-icon="akar-icons:figma-fill"></span>
+                    Figma
+                    </h1>
+                </div>
+                <div class="skill-item">
+                    <h1><span class="iconify" data-icon="simple-icons:tailwindcss"></span>
                     TailwindCSS
                     </h1>
                 </div>
                 <div class="skill-item">
-                    <h1><span><i class="fab fa-js-square"></i></span>
+                    <h1><span class="iconify" data-icon="fluent:javascript-24-filled"></span>
                     Javascript
                     </h1>
                 </div>
                 <div class="skill-item">
-                    <h1><span><i class="fab fa-react"></i></span>
+                    <h1><span class="iconify" data-icon="akar-icons:react-fill"></span>
                     React
                     </h1>
                 </div>
                 <div class="skill-item">
-                    <h1><span><i class="fab fa-python"></i></span>
+                    <h1><span class="iconify" data-icon="akar-icons:nextjs-fill"></span>
+                    NextJs
+                    </h1>
+                </div>
+                <div class="skill-item">
+                    <h1><span class="iconify" data-icon="bxl:nodejs"></span>
+                    ExpressJs
+                    </h1>
+                </div>
+                
+                <div class="skill-item">
+                    <h1><span class="iconify" data-icon="bxl:mongodb"></span>
+                    MongoDB
+                    </h1>
+                </div>
+                <div class="skill-item">
+                    <h1><span class="iconify" data-icon="akar-icons:python-fill"></span>
                     Python
                     </h1>
                 </div>
                 <div class="skill-item">
-                    <h1><span><i class="fas fa-cogs"></i></span>
-                    Django
-                    </h1>
-                </div>
-                <div class="skill-item">
-                    <h1><span><i class="fas fa-database"></i></span>
-                    PostgreSQL
-                    </h1>
-                </div>
-                <div class="skill-item">
-                    <h1><span><i class="fab fa-git-square"></i></span>
+                    <h1><span class="iconify" data-icon="fa6-brands:git-square"></span>
                     Git/Github
-                    </h1>
-                </div>
-                <div class="skill-item">
-                    <h1><span><i class="fab fa-figma"></i></span>
-                    Figma
                     </h1>
                 </div>
             </div>
@@ -185,14 +153,14 @@
     <div class="portfolio" id="portfolio">
         <div class="portfolio-container">
             <div class="portfolio-header">
-                <h1>Projects</h1>
+                <h1 class="title"><span class="iconify" data-icon="emojione-monotone:black-small-square"></span><p>Projects</p></h1>
             </div>
             <div class="portfolio-nav">
                 <ul class="portfolio-ul">
                     <li class=" list portfolio-li-active" data-filter="all">All Projects</li>
                     <li class="list" data-filter="web">Web Application</li>
                     <li class="list" data-filter="python">Python CLI</li>
-                    <li class="list" data-filter="design">UI/UX Design</li>
+                    <li class="list" data-filter="design">UI Design</li>
                 </ul>
             </div>
             <div class="portfolio-direction">
@@ -200,9 +168,26 @@
                     <img src="./img/project1.jpg" alt="myphoto">
                     <div class="portfolio-overlay">
                         <div class="portfolio-content">
-                            <h1>eCommerce</h3>
-                            <h2><i class="fab fa-figma"></i> | <i class="fas fa-bacon"></i> | <i class="fab fa-js-square"></i> | <i class="fas fa-cogs"></i> | <i class="fas fa-database"></i></h2>
-                            <h3><a class="fab fa-behance-square" href="javascript:void(0)" target="_blank"></a> | <a class="fas fa-globe" href="javascript:void(0)" target="_blank"></a> | <a class="fab fa-github" href="javascript:void(0)" target="_blank"></a> </h3>
+                            <h1>eShop</h1>
+                            <h2>
+                                <ul>
+                                    <li><span class="iconify" data-icon="akar-icons:figma-fill"></span></li>
+                                    <li><span class="iconify" data-icon="simple-icons:tailwindcss"></span></li>
+                                    <li><span class="iconify" data-icon="akar-icons:react-fill"></span></li>
+                                    <li><span class="iconify" data-icon="bxl:nodejs"></span></li>
+                                    <li><span class="iconify" data-icon="bxl:mongodb"></span></li>
+                                </ul>
+                            </h2>    
+                            <h3>
+                                <ul>
+                                    <li><a href="https://behance.net/driiisdesign" target="_blank"><span class="iconify" data-icon="fa-brands:behance-square"></span>
+                                    </a></li>
+                                    <li><a href="javascript:void(0)" target="_blank"><span class="iconify" data-icon="fa-solid:globe"></span>
+                                    </a></li>
+                                    <li><a href="https://github.com/driiisdev/eshop" target="_blank"><span class="iconify" data-icon="akar-icons:github-fill"></span>
+                                    </a></li>
+                                </ul>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -211,18 +196,44 @@
                     <div class="portfolio-overlay">
                         <div class="portfolio-content">
                             <h1>Tic Tac Toe</h1>
-                            <h2><i class="fab fa-python"></i></h2>
-                            <h3><a class="fab fa-github" href="https://github.com/driiisdev/TIC-TAC-TOE" target="_blank"></a></h3>
+                            <h2>
+                                <ul>
+                                    <li><span class="iconify" data-icon="akar-icons:python-fill"></span></li>
+                                </ul>
+                            </h2>
+                            <h3>
+                                <ul>
+                                    <li><a href="https://github.com/driiisdev/TIC-TAC-TOE" target="_blank"><span class="iconify" data-icon="akar-icons:github-fill"></span>
+                                    </a></li>
+                                </ul>
+                            </h3>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-photo web design">
-                    <img src="./img/project3.jpg" alt="myphoto"></a>
+                    <img src="./img/project3.jpg" alt="myphoto">
                     <div class="portfolio-overlay">
                         <div class="portfolio-content">
                             <h1>Space</h1>
-                            <h2><i class="fab fa-figma"></i> | <i class="fas fa-bacon"></i> | <i class="fab fa-js-square"></i> | <i class="fab fa-react"></i></h2>
-                            <h3><a class="fab fa-behance-square" href="" target="_blank"></a> | <a class="fas fa-globe" href="" target="_blank"></a> | <a class="fab fa-github" href="" target="_blank"></a></h3>
+                            <h2>
+                                <ul>
+                                    <li><span class="iconify" data-icon="akar-icons:figma-fill"></span></li>
+                                    <li><span class="iconify" data-icon="simple-icons:tailwindcss"></span></li>
+                                    <li><span class="iconify" data-icon="akar-icons:react-fill"></span></li>
+                                    <li><span class="iconify" data-icon="bxl:nodejs"></span></li>
+                                    <li><span class="iconify" data-icon="bxl:mongodb"></span></li>
+                                </ul>
+                            </h2>    
+                            <h3>
+                                <ul>
+                                    <li><a href="https://behance.net/driiisdesign" target="_blank"><span class="iconify" data-icon="fa-brands:behance-square"></span>
+                                    </a></li>
+                                    <li><a href="javascript:void(0)" target="_blank"><span class="iconify" data-icon="fa-solid:globe"></span>
+                                    </a></li>
+                                    <li><a href="https://github.com/driiisdev/space" target="_blank"><span class="iconify" data-icon="akar-icons:github-fill"></span>
+                                    </a></li>
+                                </ul>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -230,19 +241,45 @@
                     <img src="./img/project4.jpg" alt="myphoto">
                     <div class="portfolio-overlay">
                         <div class="portfolio-content">
-                            <h1>Connect-4</h1>
-                            <h2><i class="fab fa-python"></i></h2>
-                            <h3><a class="fab fa-github" href="https://github.com/driiisdev/CONNECT-4" target="_blank"></a></h3>
+                            <h1>Connect - 4</h1>
+                            <h2>
+                                <ul>
+                                    <li><span class="iconify" data-icon="akar-icons:python-fill"></span></li>
+                                </ul>
+                            </h2>
+                            <h3>
+                                <ul>
+                                    <li><a href="https://github.com/driiisdev/CONNECT-4" target="_blank"><span class="iconify" data-icon="akar-icons:github-fill"></span>
+                                    </a></li>
+                                </ul>
+                            </h3>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-photo design">
+                <div class="portfolio-photo web design">
                     <img src="./img/project5.jpg" alt="myphoto">
                     <div class="portfolio-overlay">
                         <div class="portfolio-content">
-                            <h1>Dashboard</h1>
-                            <h2><i class="fab fa-figma"></i></h2>
-                            <h3><a class="fab fa-behance-square" href="" target="_blank"></a></h3>
+                            <h1>Voting poll</h1>
+                            <h2>
+                                <ul>
+                                    <li><span class="iconify" data-icon="akar-icons:figma-fill"></span></li>
+                                    <li><span class="iconify" data-icon="simple-icons:tailwindcss"></span></li>
+                                    <li><span class="iconify" data-icon="akar-icons:react-fill"></span></li>
+                                    <li><span class="iconify" data-icon="bxl:nodejs"></span></li>
+                                    <li><span class="iconify" data-icon="bxl:mongodb"></span></li>
+                                </ul>
+                            </h2>    
+                            <h3>
+                                <ul>
+                                    <li><a href="https://behance.net/driiisdesign" target="_blank"><span class="iconify" data-icon="fa-brands:behance-square"></span>
+                                    </a></li>
+                                    <li><a href="javascript:void(0)" target="_blank"><span class="iconify" data-icon="fa-solid:globe"></span>
+                                    </a></li>
+                                    <li><a href="https://github.com/driiisdev/vote" target="_blank"><span class="iconify" data-icon="akar-icons:github-fill"></span>
+                                    </a></li>
+                                </ul>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -306,39 +343,39 @@
     <div class="contact" id="contact">
         <div class="contact-container">
             <div class="contact-header">
-                <h2 class="title">Contact Me</h2>
+                <h1 class="title"><span class="iconify" data-icon="emojione-monotone:black-small-square"></span><p>Contact</p></h1>
             </div>
             <div class="contact-direction">
                 <div class="contact-section">
                     <div class="contact-detail">
-                        <h6><span><i class="fab fa-whatsapp"></i></span> Call Me</h6>
-                        <p><a href="tel:+23498494185">+234 (0) 909 849 4185</a></p>
+                        <h6><span class="iconify" data-icon="charm:phone"></span>Call Me</h6>
+                        <p><a href="tel:+2349163885771">    +234 (0) 916 388 5771</a></p>
                     </div>
 
                     <div class="contact-detail">
-                        <h6><span><i class="fas fa-envelope"></i></span> Email Me</h6>
-                        <p><a href="mailto:olayinkayakub01@gmail.com"> olayinkayakub01@gmail.com</a></p>
+                        <h6><span class="iconify" data-icon="bx:mail-send"></span>Email Address</h6>
+                        <p><a href="mailto:olayinkayakub01@gmail.com">      olayinkayakub01@gmail.com</a></p>
                     </div>
 
                     <div class="contact-detail">
-                        <h6><span><i class="fas fa-map-marker-alt"></i></span> Location</h6>
-                        <p>Lagos, Nigeria</p>
+                        <h6><span class="iconify" data-icon="bx:map"></span>Location</h6>
+                        <p> Lagos, Nigeria</p>
                     </div>
                 </div>
                 <div class="contact-section">
-                    <form action="mail.php" method="post">
+                    <form action="./static/mail.php" method="POST" target="_self">
                         <div class="namemail">
-                        <input type="text" class="form-name" placeholder="Name" required="">
+                        <input type="text" name="name" class="form-name" placeholder="Name" required="">
 
-                        <input type="email" class="form-control" placeholder="Email" required="">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required="">
                         </div>
                         
                         <div class="subject">
-                        <input type="text" class="form-control" placeholder="Subject" required="">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject" required="">
                         </div>
                         
                         <div class="message">
-                        <textarea class="form-control" placeholder="Message" required=""></textarea>
+                        <textarea name="message" class="form-control" placeholder="Message" required=""></textarea>
                         </div>
 
                         <button type="submit" class="btn">Send Message</button>
@@ -358,16 +395,26 @@
                 </div>
                 
                 <div class="footer-socials">
-                    <a href="https://github.com/driiisdev" target="_blank"><span class="fab fa-github"></span></a>
-                    <a href="https://www.behance.net/driiisdesign" target="_blank"><span class="fab fa-behance-square"></span></a>
-                    <a href="https://www.linkedin.com/in/idris-yakub/" target="_blank"><span class="fab fa-linkedin"></span></a>
-                    <a href="https://twitter.com/driiis_" target="_blank"><span class="fa fa-twitter"></span></a>
+                    <ul>
+                        <li class="github"><a href="https://github.com/driiisdev" target="_blank">
+                            <span class="iconify" data-icon="akar-icons:github-fill"></span>
+                        </a></li>
+                        <li class="behance"><a href="https://www.behance.net/driiisdesign" target="_blank">
+                            <span class="iconify" data-icon="fa-brands:behance-square"></span>
+                        </a></li>
+                        <li class="linkedin"><a href="https://www.linkedin.com/in/idris-yakub/" target="_blank">
+                            <span class="iconify" data-icon="akar-icons:linkedin-box-fill"></span>
+                        </a></li>
+                        <li class="twitter"><a href="https://twitter.com/driiis_" target="_blank">
+                            <span class="iconify" data-icon="akar-icons:twitter-fill"></span>
+                        </a></li>
+                    </ul>
                 </div>
             </div>
         </div>
         <!-- move top -->
         <button class="moveTop" id="moveTop">
-            <span class="fa fa-angle-up"></span>
+            <span class="iconify" data-icon="ep:arrow-up"></span>
         </button>
         <!-- //move top -->
     </div>
@@ -401,7 +448,7 @@
     // text typing
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
-    const textArray = ["Web Developer", "UI/UX Designer", "Content Creator"];
+    const textArray = ["Software Developer", "MERN Stack Developer", "UI Designer"];
     const typingDelay = 200;
     const erasingDelay = 10;
     const newTextDelay = 100; // Delay between current and next text
